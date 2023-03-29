@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <time>Simple Interest</time>
+    <script src="D:\Web Programming Assignment - Tushar Singh\jquery-3.6.0.js"> </script>
+    <script>
+        $(document).ready(function () {
+            $("#totalamount").click(function () {
+                var p = $("#principal").val();
+                var t = $("#interest").val();
+                var r = $("#years").val();
+                var intr = ((+p) * (+t) * (+r)) / 100;
+                $("#intrestResult").val(intr)
+                $("#totalResult").val((+p) + intr)
+                var tot = p + intr;
+                document.getElementById('p1').innerHTML = "Principal Amount : ₹ " + p;
+                document.getElementById('p2').innerHTML = "Rate of Interest : " + t + " %";
+                document.getElementById('p3').innerHTML = "Time : " + r + " Years";
+                document.getElementById('p4').innerHTML = "Simple Interest : ₹ " + intr;
+                document.getElementById('p5').innerHTML = "Total Amount : ₹ " + ((+p) + intr);
+            });
+        });
+    </script>
+    <style>
+        #in {
+            border: 2px red solid;
+            background-color: darkgrey;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body bgcolor="black">
+    <h1 style="color: blanchedalmond;"><u> Simple Interest</u></h1>
+    <div id="in">
+        <form>
+            Principal Amount :
+            <input type="text" id="principal"><br><br>
+            Rate of Interest :
+            <input type="text" id="interest"><br><br>
+            Time in Years :
+            <input type="text" id="years"><br><br>
+            <button type="button" id="totalamount">Calculate Simple Interset</button>
+            <input type="reset" value="Clear">
+        </form>
+    </div><br>
+    <div id="in">
+        <p id="p1"> </p>
+        <p id="p2"> </p>
+        <p id="p3"> </p>
+        <p id="p4"> </p>
+        <p id="p5"> </p>
+    </div>
+</body>
+
+</html>
